@@ -1,6 +1,12 @@
 # REACT-NODEJS-MYSQL-DOCKER 
 
-Tutorial
----------
+## Running
+1. git clone https://github.com/ncprogpro/react-nodejs-mysql-docker-compose
 
-[Docker compose : NodeJS and MySQL app with React in a docker](http://www.bogotobogo.com/DevOps/Docker/Docker-React-Node-MySQL-App.php) 
+2. cd react-nodejs-mysql-docker-compose
+
+3. install packages under server directory: npm install
+
+4. run under root directory: docker-compose up -d
+
+You can browse http://localhost:3000 
