@@ -30,14 +30,14 @@ export function ParkingComponent() {
   
 
   useEffect(() => {
-    axios.get(`http://localhost:${process.env.REACT_APP_SERVER_PORT}/log`, {
+    axios.get(`http://localhost:${process.env.REACT_APP_SERVER_PORT}/sample`, {
       params: {
-        table: 'log',
+        table: 'sample',
       },
     }).then((response) => {
       // console.log(response.data[0]["parking_value"]);
       // defValue = response.data[0]["parking_value"];
-      console.log("defValue = ", response.data[0]["parking_value"])
+      // console.log("defValue = ", response.data[0]["parking_value"])
 
       
     })
