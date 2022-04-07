@@ -20,7 +20,7 @@ app.listen(process.env.REACT_APP_SERVER_PORT, () => {
 app.get('/sample', (req, res) => {
   const { table } = req.query;
 
-  pool.query(`SELECT * FROM ${table} ORDER BY id DESC LIMIT 1`, (err, results) => {
+  pool.query(`SELECT * FROM ${table} ORDER BY id DESC`, (err, results) => {
     if (err) {
       return res.send(err);
     } else {
