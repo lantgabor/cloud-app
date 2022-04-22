@@ -1,5 +1,5 @@
 import React from 'react';
-import { ParkingComponent } from 'components';
+import { ParkingComponent } from './components';
 
 function App() {
   return (
