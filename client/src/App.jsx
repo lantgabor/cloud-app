@@ -1,10 +1,8 @@
-import React from 'react';
-import { ParkingComponent } from './components';
+import React from "react";
+import { ParkingComponent } from "./components";
 
 function App() {
-  return (
-    <ParkingComponent />
-  );
+    return <ParkingComponent />;
 }
 
 export default App;

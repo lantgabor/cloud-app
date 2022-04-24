@@ -4,7 +4,7 @@ mysql: ## exec mysql
 
 .PHONY: make up
 up: ## make up
-	docker-compose up
+	docker-compose up --build
 
 .PHONY: make down
 down: ## make down

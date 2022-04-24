@@ -1,12 +1,11 @@
-FROM node:10-alpine
+FROM node:lts
 
-RUN mkdir -p /app
 WORKDIR /app
 
-COPY package.json /app
-COPY yarn.lock /app
-COPY . /app
-
+COPY package.json ./
+COPY yarn.lock ./
 RUN yarn install
+
+COPY . ./
 
 CMD ["yarn", "start"]
