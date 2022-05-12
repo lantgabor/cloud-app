@@ -39,6 +39,6 @@ dependencies:
   - name: 'mysql' # The name of the dependency
     version: 9.0.0 # The version of the dependency
     repository: "@bitnami"
-    condition: db.enabled # See Dependency Selective Installation below
+    condition: mysql.enabled # See Dependency Selective Installation below
     tags: # See Dependency Selective Installation below
-     - db
+     - mysql
