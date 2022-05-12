@@ -7,11 +7,11 @@ up: ## make up
 	docker-compose up
 
 .PHONY: make up build
-up-build: ## make up
+up-build: ## docker-compose up build
 	docker-compose up --build
 
 .PHONY: make down
-down: ## make down
+down: ## docker-compose down volumes
 	docker-compose down --volumes
 
 .PHONY: help
@@ -21,3 +21,7 @@ help: Makefile
 .PHONY: k9s
 k9s: ## Start k9s dashboard
 	docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s
+
+.PHONY: helm dependency update
+helm-dependency-update: ## Helm dependency update
+	(cd chart && helm dependency update)

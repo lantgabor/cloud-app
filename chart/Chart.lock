@@ -1,0 +1,12 @@
+dependencies:
+- name: client
+  repository: ""
+  version: 1.0.0
+- name: server
+  repository: ""
+  version: 1.0.0
+- name: mysql
+  repository: https://charts.bitnami.com/bitnami
+  version: 9.0.0
+digest: sha256:e509137ea4464f017b40040407757e2a6f4889b9e54ef7222add77306ec1093a
+generated: "2022-05-13T01:25:47.979536+02:00"
