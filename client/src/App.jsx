@@ -14,8 +14,8 @@ function App() {
                     alignItems: "center",
                 }}
             >
-                <ParkingComponent />
                 <InputComponent />
+                <ParkingComponent />
             </Box>
         </>
     );
