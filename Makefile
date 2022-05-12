@@ -12,7 +12,7 @@ up-build: ## make up
 
 .PHONY: make down
 down: ## make down
-	docker-compse down --volumes
+	docker-compose down --volumes
 
 .PHONY: help
 help: Makefile
