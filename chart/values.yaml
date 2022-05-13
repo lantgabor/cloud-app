@@ -9,4 +9,4 @@ mysql:
   enabled: true
 
 client:
-  enabled: false
+  enabled: true
