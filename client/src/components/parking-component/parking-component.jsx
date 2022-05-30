@@ -10,7 +10,7 @@ export function ParkingComponent() {
     useEffect(() => {
         axios
             .get(
-                `http://localhost:${process.env.REACT_APP_SERVER_PORT}/sample`,
+                `http://${process.env.REACT_APP_BACKEND_IP}:8000`,
                 {
                     params: {
                         table: "sample",

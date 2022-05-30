@@ -27,6 +27,17 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
+          env:
+            - name: "MYSQL_USER"
+              value: {{ .Values.mysql.username }}
+            - name: "MYSQL_PASSWORD"
+              value: {{ .Values.mysql.password }}
+            - name: "MYSQL_DATABASE"
+              value: {{ .Values.mysql.db }}
+            - name: "MYSQL_HOST_IP"
+              value: "TEST_RELEASE_MYSQL_PORT_3306_TCP_ADDR"
+            - name: "REACT_APP_SERVER_PORT"
+              value: "80"
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
@@ -35,14 +46,14 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

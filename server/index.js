@@ -17,7 +17,7 @@ app.listen(process.env.REACT_APP_SERVER_PORT, () => {
   console.log(`App server now listening on port ${process.env.REACT_APP_SERVER_PORT}`);
 });
 
-app.get('/sample', (req, res) => {
+app.get('/', (req, res) => {
   const { table } = req.query;
 
   pool.query(`SELECT * FROM ${table} ORDER BY id DESC`, (err, results) => {

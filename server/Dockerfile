@@ -1,12 +1,14 @@
 FROM node:16
 
-WORKDIR /app
+# Create app directory
+WORKDIR /usr/src/app
 
-COPY package.json /app
-COPY package-lock.json /app
+COPY package*.json ./
 
 RUN npm install
 
-COPY ./index.js /app
+# Bundle app source
+COPY ./index.js .
 
-CMD ["npm", "start"]
+EXPOSE 80
+CMD [ "npm", "start" ]

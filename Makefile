@@ -28,5 +28,5 @@ helm-dependency-update: ## Helm dependency update
 
 .PHONY: build images prod
 image-build-prod: ## Build images prod
-	(cd server && docker build -t cloud_app-server.prod -f Dockerfile.prod .)
-	(cd client && docker build -t cloud_app-client.prod -f Dockerfile.prod .)
+	(cd server && docker build -t cloud-app-server.prod -f Dockerfile.prod .)
+	(cd client && docker build -t cloud-app-client.prod -f Dockerfile.prod .)
