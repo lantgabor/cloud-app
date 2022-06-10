@@ -29,13 +29,13 @@ spec:
         - name: {{ .Chart.Name }}
           env:
             - name: "MYSQL_USER"
-              value: {{ .Values.mysql.username }}
+              value: {{ .Values.mysql.auth.username }}
             - name: "MYSQL_PASSWORD"
-              value: {{ .Values.mysql.password }}
+              value: {{ .Values.mysql.auth.password }}
             - name: "MYSQL_DATABASE"
-              value: {{ .Values.mysql.db }}
+              value: {{ .Values.mysql.auth.database }}
             - name: "MYSQL_HOST_IP"
-              value: "TEST_RELEASE_MYSQL_PORT_3306_TCP_ADDR"
+              value: test-release-mysql
             - name: "REACT_APP_SERVER_PORT"
               value: "80"
           securityContext:

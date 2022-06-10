@@ -1,9 +1,11 @@
 server:
   enabled: true
   mysql:
-    username: "sampleuser"
-    password: "samplepassword"
-    db: "sampledb"
+    auth:
+      rootPassword: "rootpassword"
+      database: sampledb
+      username: "sampleuser"
+      password: "samplepassword"
 
 mysql:
   enabled: true
