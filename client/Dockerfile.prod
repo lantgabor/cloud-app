@@ -1,6 +1,6 @@
 FROM node:lts-alpine as builder
 
-ARG REACT_APP_BACKEND_IP=asd
+ARG REACT_APP_BACKEND_IP=test-release-server
 WORKDIR /app
 COPY package.json ./
 COPY yarn.lock ./
