@@ -10,7 +10,7 @@ export function ParkingComponent() {
     useEffect(() => {
         axios
             .get(
-                `http://${process.env.REACT_APP_BACKEND_IP}`,
+                `http://localhost:30002/api`,
                 {
                     params: {
                         table: "sample",
@@ -20,10 +20,6 @@ export function ParkingComponent() {
             .then((response) => {
                 setPlanets(response.data);
             });
-
-        fetch(`http://${process.env.REACT_APP_BACKEND_IP}`)
-            .then(response => response.json())
-            .then(data => console.log(data));
     }, []);
 
 
